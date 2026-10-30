@@ -10,7 +10,7 @@ Submission form: https://forms.gle/4V1v2VWU78XwM3H57
 
 The API implementation passes all 24 local integration tests on Node 24, using an isolated MongoDB replica set. These tests do not substitute for the course autograder.
 
-Atlas setup, Render deployment, the deployed URL in `submit.js`, and the deployed autograder self-check are pending account setup. No deployed score has been obtained yet.
+The tested implementation, deployment configuration, source attribution, and chatlog were pushed to `Phw5/mp3`. A dedicated `CS409 MP3` Atlas project has been created. Free-tier AWS Oregon cluster creation is blocked by the Atlas reCAPTCHA connection error after a reload and retry; its configuration is saved. Render is waiting at the Google account chooser. Cluster creation, database credentials, Render deployment, the deployed URL in `submit.js`, and the deployed autograder self-check are still pending. No deployed score has been obtained yet.
 
 ## Before submitting
 
