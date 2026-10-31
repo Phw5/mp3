@@ -4,21 +4,28 @@ Due: Tuesday, November 3, 2026, 11:59 PM Central Time.
 
 Repository: https://github.com/Phw5/mp3
 
+Deployed API base URL: https://phw5-mp3.onrender.com
+
+API endpoints: https://phw5-mp3.onrender.com/api/users and https://phw5-mp3.onrender.com/api/tasks
+
 Submission form: https://forms.gle/4V1v2VWU78XwM3H57
 
-## Current status
+Chatlog: https://github.com/Phw5/mp3/blob/main/llm_chatlog.md
 
-The API implementation passes all 24 local integration tests on Node 24, using an isolated MongoDB replica set. These tests do not substitute for the course autograder.
+References: https://github.com/Phw5/mp3/blob/main/SOURCES.md
 
-The tested implementation, deployment configuration, source attribution, and chatlog were pushed to `Phw5/mp3`. A dedicated `CS409 MP3` Atlas project has been created. The free-tier AWS Oregon cluster is active in the dedicated Atlas project. Render is signed in and its free Node 24 web-service configuration is prepared from the public repository. Database credentials, completion of Render deployment, the deployed URL in `submit.js`, and the deployed autograder self-check are still pending. No deployed score has been obtained yet.
+## Verification
 
-## Before submitting
+On October 31, 2026, the deployed API passed all 19 course autograder checks for a score of 100/100 (20/20 points). The implementation also passes all 24 local integration tests on Node 24, including invalid requests, reference updates, concurrent requests, and transaction rollback.
 
-1. Complete Atlas and Render setup in `SETUP.md`.
-2. Push the final implementation, source attribution, and chatlog to the public repository.
-3. Set `API_URL` in `submit.js` to the actual Render base URL, with no `/api` suffix.
-4. Run `npm run submit` on Node 24 and address any feedback.
-5. Keep the Atlas cluster and Render service available for grading.
-6. Submit the repository and deployed URL through the submission form. Include the LLM chatlog and answer the LLM survey questions truthfully.
+The API is deployed on Render's free instance in Oregon using Node 24. Atlas has an active free cluster in the dedicated CS409 MP3 project. The mp3user database account has readWrite access to the mp3 database, and the required 0.0.0.0/0 network-access entry is active. The connection string is stored as a Render secret. API_URL in submit.js points to the actual deployed base URL; AUTOGRADER_URL is unchanged.
 
-`.gitignore` is retained and `.env` is ignored. Never submit the database password or connection string in the repository, chatlog, or grading form. Running `submit.js` is only a self-check, not an assignment submission. No video is required for MP3.
+## Final student step
+
+Submit the form yourself. Use your @illinois.edu email address, your NetID, the repository URL, and the deployed API base URL above. Cite SOURCES.md and include the LLM chatlog. Select Yes for LLM use and answer the hours and experience questions truthfully. The Comments field can remain empty.
+
+The form allows only one submission, so check the links before submitting. Running npm run submit is only a self-check and does not submit the assignment. No video is required for MP3.
+
+Keep the Atlas cluster and Render service available for grading. The free Render instance can take about a minute to wake up after inactivity.
+
+.gitignore is retained and .env is ignored and untracked. Never put the database password or connection string in the repository, chatlog, or grading form.

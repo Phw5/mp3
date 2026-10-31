@@ -158,3 +158,90 @@ The approved `0.0.0.0/0` entry is now active in Atlas. I’m preparing the datab
 The database-user form is prepared with `readWrite` access limited to the `mp3` database. Please enter a username and password, then click **Add User**. The browser tool requires you to complete new credential creation; keep the password out of chat.
 
 (Local screenshot shown: Prepared database-user form.)
+
+
+## Assistant
+
+Atlas’s free cluster and network access are ready. Render’s deployment settings are prepared.
+
+Please finish the open **Add New Database User** form: enter a username and password, then click **Add User**. I’ve set `readWrite` access for `mp3`.
+
+The browser tool requires you to create new credentials yourself. Tell me once it’s created—don’t share the password here—and I’ll finish deployment and run the autograder.
+
+
+## User
+
+<send_user_message_question_reply>
+[{"questionItemId":"[\"request_user_input_async\",\"call_286de2bb4f554528951a875e65e98276\",0]","question":"Please complete the prepared Atlas “Add New Database User” form in Chrome: enter a username (for example mp3user), choose a password, and click Add User. The readWrite role for database mp3 is already set. Tell me once the user has been created; don’t send the password here.","answer":"where is it i cant see it?"}]
+</send_user_message_question_reply>
+
+
+## Assistant
+
+I’ll bring the Atlas database-user form to the front.
+
+
+## Assistant
+
+The setup tab closed after my previous turn. I’ve reopened it and kept it open.
+
+In Chrome, look under **🗄️ MP3 setup → Database Access**. The **Add New Database User** form is now in front.
+
+Enter a username and password, then scroll down and click **Add User**. The permissions are already configured. Tell me when done; don’t share the password here.
+
+(Local screenshot shown: Open Atlas database-user form.)
+
+
+## User
+
+done
+
+
+## Assistant
+
+I’ll verify the database user was created, then connect the API to Atlas and finish the Render deployment.
+
+
+## Assistant
+
+`mp3user` is created with the correct database permissions. I’ve retrieved the Atlas connection-string template. I’m preparing Render’s secret field; you’ll need to fill in the password because Atlas doesn’t reveal it after creation.
+
+
+## Assistant
+
+Everything is ready except the database password. In Chrome’s **Render** tab, I’ve highlighted `REPLACE_PASSWORD` inside the `MONGODB_URI` value.
+
+Replace just that highlighted text with the password you created for `mp3user`. Keep it out of chat and leave the rest of the connection string unchanged. I’ll handle any needed encoding before deploying.
+
+(Local screenshot shown: Render password placeholder.)
+
+
+## Assistant
+
+The database user is verified. In the open **Render** tab, replace the highlighted `REPLACE_PASSWORD` text with your Atlas password.
+
+Then tell me **“password added”**—don’t send the password here. I’ll deploy the API and run the autograder.
+
+
+## User
+
+<send_user_message_question_reply>
+[{"questionItemId":"[\"request_user_input_async\",\"call_329bce28cb4e4ca59112745eda0d1724\",0]","question":"Replace the highlighted REPLACE_PASSWORD text in Render’s MONGODB_URI field with your Atlas database password, then confirm below. This authorizes storing that connection string as a Render secret so the deployed API can access your mp3 database. Don’t paste the password into chat.","answer":"Password added in Render; deploy the API"}]
+</send_user_message_question_reply>
+
+
+## Assistant
+
+I’ll deploy the API, verify its Atlas connection, and run the course autograder. I’ll keep the connection string out of the chat and repository.
+
+
+## Assistant
+
+The API is live at [phw5-mp3.onrender.com](https://phw5-mp3.onrender.com/api/users). The users endpoint returns `200` with an empty list, confirming the deployed server can reach Atlas. I’m setting the deployed URL in `submit.js` and running the autograder.
+
+
+## Assistant
+
+The deployed API scored **100/100** on the course autograder—all 19 checks passed.
+
+I’m finishing the submission files and applying two compatible dependency fixes flagged during the build. Then I’ll verify the final deployment.
