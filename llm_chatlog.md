@@ -245,3 +245,19 @@ The API is live at [phw5-mp3.onrender.com](https://phw5-mp3.onrender.com/api/use
 The deployed API scored **100/100** on the course autograder—all 19 checks passed.
 
 I’m finishing the submission files and applying two compatible dependency fixes flagged during the build. Then I’ll verify the final deployment.
+
+
+## Assistant
+
+The updated deployment is live, and all 24 local tests still pass. I also verified the private local `.env` connects to Atlas and remains untracked by Git.
+
+The final autograder check is running. I’ve opened the submission form for you; it requires your `@illinois.edu` email and your own answers about time spent and LLM use.
+
+
+## Assistant
+
+The final deployment also scored **100/100**. I’m saving the grader results and final chatlog to GitHub.
+
+The only remaining step is your submission form, including the required LLM disclosure and survey.
+
+(Local screenshot shown: Live Render deployment.)

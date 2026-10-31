@@ -1,0 +1,32 @@
+Verified October 31, 2026
+Deployed runtime commit: 6278600d750bc1607e09a04b148978184d050694
+
+
+> mp3_starter@1.0.0 submit
+> node submit.js
+
+Submitting https://phw5-mp3.onrender.com to the autograder...
+This can take a few minutes (the autograder runs many requests against your API).
+
+[PASS   ] POST /users  (1/1)
+[PASS   ] POST /users (validation)  (1/1)
+[PASS   ] POST /tasks  (1/1)
+[PASS   ] POST /tasks (validation)  (1/1)
+[PASS   ] GET /users/:id (select)  (0.75/0.75)
+[PASS   ] GET /tasks/:id (select)  (0.75/0.75)
+[PASS   ] PUT /users/:id (not found)  (1/1)
+[PASS   ] PUT /tasks/:id (not found)  (1/1)
+[PASS   ] PUT /tasks/:id (two-way reference)  (2.5/2.5)
+[PASS   ] PUT /users/:id (two-way reference)  (2/2)
+[PASS   ] PUT /tasks/:id (assignedUserName mismatch)  (1/1)
+[PASS   ] GET /tasks (where)  (0.75/0.75)
+[PASS   ] GET /tasks (sort)  (0.75/0.75)
+[PASS   ] GET /tasks (limit)  (0.75/0.75)
+[PASS   ] DELETE /tasks/:id  (1/1)
+[PASS   ] GET /tasks/:id (deleted)  (1/1)
+[PASS   ] GET /tasks (count)  (0.75/0.75)
+[PASS   ] DELETE /users/:id  (1/1)
+[PASS   ] GET /users/:id (deleted)  (1/1)
+
+Score: 100/100  (20/20 points)
+

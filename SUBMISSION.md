@@ -14,11 +14,13 @@ Chatlog: https://github.com/Phw5/mp3/blob/main/llm_chatlog.md
 
 References: https://github.com/Phw5/mp3/blob/main/SOURCES.md
 
+Autograder results: https://github.com/Phw5/mp3/blob/main/AUTOGRADER_RESULTS.txt
+
 ## Verification
 
 On October 31, 2026, the deployed API passed all 19 course autograder checks for a score of 100/100 (20/20 points). The implementation also passes all 24 local integration tests on Node 24, including invalid requests, reference updates, concurrent requests, and transaction rollback.
 
-The API is deployed on Render's free instance in Oregon using Node 24. Atlas has an active free cluster in the dedicated CS409 MP3 project. The mp3user database account has readWrite access to the mp3 database, and the required 0.0.0.0/0 network-access entry is active. The connection string is stored as a Render secret. API_URL in submit.js points to the actual deployed base URL; AUTOGRADER_URL is unchanged.
+The API is deployed on Render's free instance in Oregon using Node 24. Atlas has an active free cluster in the dedicated CS409 MP3 project. The mp3user database account has readWrite access to the mp3 database, and the required 0.0.0.0/0 network-access entry is active. The connection string is stored as a Render secret and in the private, ignored local .env file. The local Atlas connection was also verified successfully. API_URL in submit.js points to the actual deployed base URL; AUTOGRADER_URL is unchanged.
 
 ## Final student step
 
