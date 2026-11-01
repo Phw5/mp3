@@ -10,7 +10,7 @@ API endpoints: https://phw5-mp3.onrender.com/api/users and https://phw5-mp3.onre
 
 Submission form: https://forms.gle/4V1v2VWU78XwM3H57
 
-Chatlog: https://github.com/Phw5/mp3/blob/main/llm_chatlog.md
+Chatlog: To be provided separately with the course submission.
 
 References: https://github.com/Phw5/mp3/blob/main/SOURCES.md
 
